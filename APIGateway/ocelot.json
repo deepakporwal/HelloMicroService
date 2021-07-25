@@ -9,8 +9,21 @@
       ],
       "DownstreamPathTemplate": "/api/user",
       "DownstreamScheme": "https",
-      "UpstreamHttpMethod": [ "GET" ],
+      "UpstreamHttpMethod": [ "GET", "POST" ],
       "UpstreamPathTemplate": "/user"
+    },
+    {
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": 44337
+        }
+      ],
+      "DownstreamPathTemplate": "/api/user/{id}",
+      "DownstreamScheme": "https",
+      "UpstreamHttpMethod": [ "GET"],
+      "UpstreamPathTemplate": "/user/{id}"
     }
+
   ]
 }
